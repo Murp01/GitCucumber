@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,6 +13,19 @@ import cucumber.api.java.en.When;
 
 public class SD_HomePage {
 	public WebDriver driver;
+	
+	
+	//@Before
+	public void testSetUp() {
+		System.setProperty("webdriver.gecko.driver", "C:\\Eclipse\\Webdrivers\\geckodriver.exe");
+		driver = new FirefoxDriver();
+	}
+	
+	//@After
+	public void testTearDown() {
+		driver.close();
+	}
+	
 	
 	@Given("^the user is on the homepage$")
 	public void WebDriverInitializer() {
