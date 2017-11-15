@@ -10,5 +10,4 @@ import cucumber.api.junit.Cucumber;
 public class TR_GlobalNavigation {
 	
 	
-
 }
